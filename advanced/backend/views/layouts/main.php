@@ -36,11 +36,21 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        //['label' => 'Home', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = ['label' => '知名校友', 'url' => ['/nku100-famousschoolmate/index']];
+        $menuItems[] = ['label' => '校友会', 'url' => ['/nku100-alumniassociation/index']];
+        $menuItems[] = ['label' => '校庆新闻', 'url' => ['/nku100-news/index']];
+        $menuItems[] = ['label' => '校庆公告', 'url' => ['/nku100-notice/index']];
+        $menuItems[] = ['label' => '校庆景点', 'url' => ['/nku100-viewspots/index']];
+        $menuItems[] = ['label' => '志愿者', 'url' => ['/nku100-volunteer/index']];
+        $menuItems[] = ['label' => '志愿工作', 'url' => ['/nku100-volunteer-work/index']];
+        $menuItems[] = ['label' => '活动', 'url' => ['/nku100-activity/index']];
+        $menuItems[] = ['label' => '小组成员', 'url' => ['/nku100-member/index']];
+        $menuItems[] = ['label' => '留言', 'url' => ['/nku100-message/index']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

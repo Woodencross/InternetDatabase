@@ -36,9 +36,19 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        //['label' => 'Home', 'url' => ['/site/index']],
+        //['label' => 'About', 'url' => ['/site/about']],
+        //['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => '知名校友', 'url' => ['/nku100-famousschoolmate/index']],
+        ['label' => '校友会', 'url' => ['/nku100-alumniassociation/index']],
+        ['label' => '校庆新闻', 'url' => ['/nku100-news/index']],
+        ['label' => '校庆公告', 'url' => ['/nku100-notice/index']],
+        ['label' => '校庆景点', 'url' => ['/nku100-viewspots/index']],
+        ['label' => '志愿者', 'url' => ['/nku100-volunteer/index']],
+        ['label' => '志愿工作', 'url' => ['/nku100-volunteer-work/index']],
+        ['label' => '活动', 'url' => ['/nku100-activity/index']],
+        ['label' => '小组成员', 'url' => ['/nku100-member/index']],
+        ['label' => '留言', 'url' => ['/nku100-message/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
